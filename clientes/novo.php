@@ -2,8 +2,8 @@
 include "../includes/cabecalho.php";
 include "../includes/menu.php";
 ?>
-<h1>Novo aluno</h1>
-<p>Vamos cadastrar um aluno novo no sistema</p>
+<h1>Novo cliente</h1>
+<p>Vamos cadastrar um cliente novo no sistema</p>
 <form action="inserir.php" method="post">
     Nome: <input name="nome" required maxlength="50"><br>
     Cidade: <input name="cidade" required maxlength="50"><br>
