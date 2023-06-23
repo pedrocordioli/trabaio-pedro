@@ -1,11 +1,10 @@
 <?php
 include "../includes/cabecalho.php";
-include "../includes/menu.php";
 include "../includes/conexao.php";
 
 $id = $_GET["id"];
 $nome = "";
-$sql = "select * from t_cliente where id_cliente = $id";
+$sql = "select * from t_cliente where id_codigo = $id";
 $todos_os_clientes = mysqli_query($conexao, $sql);
 while($um_cliente = mysqli_fetch_assoc($todos_os_clientes)):
     $nome = $um_cliente["nome"];

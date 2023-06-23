@@ -1,12 +1,11 @@
 <?php
 include "../includes/cabecalho.php";
-include "../includes/menu.php";
 include "../includes/conexao.php";
 ?>
 
 <h1>Módulo de clientes</h1>
 <p>
-    <a href="novo.php">Adicionar cliente</a>
+<button type="button" class="btn btn-warning"><a href="novo.php">Adicionar cliente</a></button>
 </p>
 <h2>Listagem de clientes</h2>
 <table border="1">
@@ -28,7 +27,7 @@ include "../includes/conexao.php";
     while($um_cliente = mysqli_fetch_assoc($todos_os_clientes)):
     ?>
     <tr>
-        <td><?php echo $um_cliente['id'];?></td>
+        <td><?php echo $um_cliente['id_codigo'];?></td>
         <td><?php echo $um_cliente['nome'];?></td>
         <td><?php echo $um_cliente['cidade'];?></td>
         <td><?php echo $um_cliente['estado'];?></td>
@@ -37,8 +36,8 @@ include "../includes/conexao.php";
         <td><?php echo $um_cliente['data_nascimento'];?></td>
         <td><?php echo $um_cliente['data_ultima_consulta'];?></td>
         <td>
-            <a href="visualizar.php?id=<?php echo $um_pet ["id_cliente"];?>" title="Ver completo">Visualizar</a>
-            <a href="editar.php?id=<?php echo $um_pet ["id_cliente"];?>" title="Ver completo">Editar</a>
+            <a href="visualizar.php?id_cliente=<?php echo $um_pet ["id_cliente"];?>" title="Ver completo">Visualizar</a>
+            <a href="editar.php?id_cliente=<?php echo $um_pet ["id_cliente"];?>" title="Ver completo">Editar</a>
             <a href="deletar.php?id_cliente=<?php echo $um_pet['id_cliente'];?>">Excluir</a>
         </td>
     </tr>
