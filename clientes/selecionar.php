@@ -28,7 +28,7 @@ include "../includes/conexao.php";
     while($um_cliente = mysqli_fetch_assoc($todos_os_clientes)):
     ?>
     <tr>
-        <td><?php echo $um_cliente['id_cliente'];?></td>
+        <td><?php echo $um_cliente['id'];?></td>
         <td><?php echo $um_cliente['nome'];?></td>
         <td><?php echo $um_cliente['cidade'];?></td>
         <td><?php echo $um_cliente['estado'];?></td>
